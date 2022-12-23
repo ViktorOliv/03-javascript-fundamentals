@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> querySelector #2 </title>
+
+    <style>
+
+    </style>
+
+</head>
+<body>
+<div>
+    <p id="first">fffffLorem ipsum dolor sit amet consectetur adipisicing elit. Eos odio quaerat aliquid quis molestiae, blanditiis quos vel consequuntur, dicta architecto perferendis voluptates suscipit velit rerum, possimus impedit veritatis! Ea, dignissimos?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio officiis voluptatibus impedit obcaecati. Lorem ipsum dolor sit.</p>
+    <a href="https://itvdn.com/ua">ITVDN</a>
+    <a href="https://itvdn.com/ua/catalog">catalog</a>
+</div>
+
+<ul class="my-list">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+    <li>List item 4</li>
+    <li>List item 5</li>
+</ul>
+
+<article>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic dolorum temporibus fugit sunt optio maxime iure nobis deserunt officia. Quis eos repellendus, consequatur expedita labore provident! Vitae, veritatis tenetur?
+</article>
+
+
+    <script>
+        let link = document.querySelector( 'a[href="https://itvdn.com/ua"]' );
+        link.style.border = "2px solid red" ;
+
+        let unorderedList = document.querySelector ('.my-list');
+        unorderedList.style.border = "2px solid green" ;
+
+        let article = document.querySelector ('article');
+        article.style.border = "2px solid blue" ;
+    </script>
+
+</body>
+</html>
