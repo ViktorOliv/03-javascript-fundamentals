@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector #1</title>
+
+    <style>
+        .test {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <p id="first">fffffLorem ipsum dolor sit amet consectetur adipisicing elit. Eos odio quaerat aliquid quis molestiae, blanditiis quos vel consequuntur, dicta architecto perferendis voluptates suscipit velit rerum, possimus impedit veritatis! Ea, dignissimos?</p>
+    <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio officiis voluptatibus impedit obcaecati. Lorem ipsum dolor sit.</p>
+
+    <script>
+        let paragraph = document.querySelector("#first");
+        paragraph.style.border = "2px solid red";
+    </script>
+
+</body>
+</html>
