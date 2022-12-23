@@ -37,6 +37,11 @@
         }
         return color;
     }
+
+    let paragraph = document.querySelectorAll('p');
+    for (const p of paragraph) {
+        p.style.border = "1px solid" + getRandomColor();
+    }
 </script>
 
 </html>
