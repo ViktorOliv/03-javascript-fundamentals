@@ -5,8 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>uoterHTML</title>
+
+    <style>
+        div {
+            background-color: lightblue;
+            padding: 8px;
+            margin: 8px;
+        }
+
+        p {
+            background-color: coral;
+            padding: 8px;
+            margin: 8px;
+        }
+    </style>
+
 </head>
 <body>
-    
+
+    <p id="test">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias ea, doloribus, consectetur assumenda eum nulla animi ex debitis porro nam quibusdam accusamus eos beatae error hic explicabo enim obcaecati quas.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eius perferendis inventore recusandae eligendi voluptates laudantium, dolor quia nulla. Numquam asperiores ipsa corporis praesentium illum repellat saepe dolore qui illo.</p>
+    <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi aliquam error? Sequi placeat quidem, eveniet magnam quasi harum iste obcaecati adipisci architecto vero incidunt laboriosam, sint perferendis, fuga ratione?</div>
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem neque doloribus sed quibusdam quia nemo. Molestiae, ea similique itaque illum dolor voluptate voluptates debitis? Excepturi fuga necessitatibus est perferendis deserunt.</div>
+
+    <script>
+        let node = document.querySelector("#test");
+        node.outerHTML = "<div> Hello world </div>";
+    </script>
 </body>
 </html>
