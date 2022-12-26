@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>node-properties</title>
+</head>
+<body>
+    <p><i>Hello</i> world </p>
+
+    <script>
+        let node = document.querySelector('p');
+
+        console.log("nodeType = " + node.nodeType); // тип вузла
+        console.log("innerHTML = " + node.innerHTML); //вміст вузла як HTML
+        console.log("outerHTML = " + node.outerHTML); // вміст вузла і сам вузол
+        console.log("textContent = " + node.textContent); // вміст вузла як текст
+        console.log("hidden = " + node.hidden); // видимість вузла
+
+        // console.log
+        // 001-index.html:15 nodeType = 1
+        // 001-index.html:16 innerHTML = <i>Hello</i> world 
+        // 001-index.html:17 outerHTML = <p><i>Hello</i> world </p>
+        // 001-index.html:18 textContent = Hello world 
+        // 001-index.html:19 hidden = false
+
+    </script>
+
+</body>
+</html>
