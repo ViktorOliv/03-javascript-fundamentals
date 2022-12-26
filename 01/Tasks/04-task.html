@@ -43,6 +43,15 @@
     Для первого и последнего элемента li для всех ul на данной странице
     добавьте сплошную красную рамку толщиной в 1px
     */
+
+    let firstLastLi = document.querySelectorAll("ul>li:first-child, ul>li:last-child");
+    console.log(firstLastLi);
+
+    for (const li of firstLastLi) {
+        li.style.border = "1px solid red" ;
+    }
+
+
 </script>
 
 </html>
