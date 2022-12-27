@@ -16,6 +16,13 @@
         Выведите значение переменной input в span, расположенный на странице
         */
         let input = prompt("Введите сообщение");
+        let text = document.querySelector("div>span"); ;
+        
+        text.textContent = input;
+        
+        // or:
+        // document.querySelector("div>span").textContent = input;
+
     </script>
 </body>
 

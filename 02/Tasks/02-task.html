@@ -35,9 +35,12 @@
             return color;
         }
 
+        let color = getRandomColor();
+
         let colorSampleDiv = document.querySelector("#color-sample");
-        colorSampleDiv.style.backgroundColor = getRandomColor();
+        colorSampleDiv.style.backgroundColor = color;
         
+        document.querySelector("p").textContent += color;
 
     </script>
 </body>

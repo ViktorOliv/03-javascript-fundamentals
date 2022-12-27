@@ -75,6 +75,33 @@
         В div с id result выведите сообщение "Отдел 1 сделал больше продаж" или "Отдел 2 сделал больше продаж" на основе раннее вычисленных значений в строке "Итого".
         Используйте любые методы, которые были рассмотрены на в прошлых уроках.
         */
+
+        let statsTable1 = document.querySelectorAll("#statsTable td:nth-child(2)"),
+            statsTable2 = document.querySelectorAll("#statsTable td:nth-child(3)"),
+            result = document.querySelector("#result");
+        
+        let sum1 = sumColumn(statsTable1),
+            sum2 = sumColumn(statsTable2);
+            
+        function sumColumn (numberTable) {
+            let sum = 0;
+            numberTable.forEach(element => {
+                sum += +element.textContent;
+            });
+            return sum;
+        }
+
+            console.log(sum1);
+            console.log(sum2);
+
+        document.querySelector("#statsTable").innerHTML += `<tr><td>Итого</td><td>${sum1}</td><td>${sum2}</td></tr>`;
+
+        if (sum2>sum1) {
+            result.textContent = "Отдел 2 сделал больше продаж";
+        } else {
+            result.textContent = "Отдел 1 сделал больше продаж";
+        }
+
     </script>
 </body>
 </html>
