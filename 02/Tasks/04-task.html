@@ -62,8 +62,21 @@
         Задание:
         Напишите сценарий, который на основании значений во второй колонке таблицы #statsTable поменяет цвет строк таблицы (tr)
         Если во второй ячейке значение больше 100, строка должна отображаться зеленым цветом, если значение менее 100 - красным цветом.
-        Для смены цвета строки используйте код row.style.backgroundColor = "цвет"
         */
+
+        let tdValue = document.querySelectorAll("#statsTable td:nth-child(2)");
+
+        for (const td of tdValue) {
+            
+            let currentRow = td.parentElement;
+
+            if (td.textContent >= 100) {
+                currentRow.style.backgroundColor = "#32CD32";
+            } else {
+                currentRow.style.backgroundColor = "red";
+            }
+        }
+
     </script>
 </body>
 
