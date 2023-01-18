@@ -61,6 +61,25 @@
             }
         ];
 
+            createTable(source);
+
+        function createTable (sourceArr) {
+            let table = document.createElement("table");
+
+            for (const sources of sourceArr) {
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td");
+
+                td1.textContent = sources.month;
+                td2.textContent = sources.amount;
+                tr.append(td1);
+                tr.append(td2);
+                table.append(tr);
+            }
+            
+            document.body.append(table);
+        }
     </script>
 </body>
 
