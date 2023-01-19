@@ -29,6 +29,19 @@
             age: "25",
         }
 
+        let bind = document.querySelectorAll("[data-bind]");
+        
+        bind.forEach(e => {
+
+            for (const userValue in user) {
+                if (Object.hasOwnProperty.call(user, userValue)) {
+                    const element = user[userValue];
+                }
+                if (e.dataset.bind === userValue) {
+                e.textContent = user[userValue];
+                }
+            }
+        });
     </script>
 </body>
 
