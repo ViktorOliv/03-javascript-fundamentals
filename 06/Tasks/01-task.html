@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <button id="testBtn">Test Button</button>
+    <button id="testBtn" onclick="alert('hello world')">Test Button</button>
     <script>
         /*
         Задание:
@@ -17,6 +17,16 @@
         Обработчик должен выводить на экран сообщение Hello world.
         Добавьте обработчик тремя разными способами.
         */
+
+        let btn = document.querySelector("#testBtn");
+        console.log(btn);
+
+        function myFunction() {
+            alert("Hello world");
+        }
+
+        btn.onclick = myFunction;
+        btn.addEventListener("click", myFunction);
     </script>
 </body>
 
