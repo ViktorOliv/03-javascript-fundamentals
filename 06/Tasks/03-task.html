@@ -46,22 +46,50 @@
         let remBtn = document.querySelector("#rem-btn");
         let mulBtn = document.querySelector("#mul-btn");
         let divBtn = document.querySelector("#div-btn");
+        let resetBtn = document.querySelector("#reset-btn");
+
+        resetBtn.addEventListener("click", () => {
+            input1.value = 0;
+            input3.value = 0;
+        } );
 
         addBtn.addEventListener("click", function () {
+            errorChecking();
             alert(Number(input1.value) + Number(input2.value));
         });
 
         remBtn.addEventListener("click", function () {
+            errorChecking();
             alert(input1.value - input2.value);
         });
 
         mulBtn.addEventListener("click", function () {
+            errorChecking();
             alert(input1.value * input2.value);
         });
 
         divBtn.addEventListener("click", function () {
+            errorChecking();
             alert(input1.value / input2.value);
         });
+
+
+        function errorChecking() {
+            error(input1,"input1Error");
+            error(input3, "input2Error");
+        }
+        function error(input, spanId) {
+            if (!input.value) {
+                input.style.border = "2px solid red";
+                inputErrorSpan = document.querySelector(`#${spanId}`);
+                inputErrorSpan.style.display = "block";
+            } 
+            else {
+                input.style.border = "1px solid black";
+                inputErrorSpan = document.querySelector(`#${spanId}`);
+                inputErrorSpan.style.display = "none";
+            }
+        }
     </script>
 </body>
 
