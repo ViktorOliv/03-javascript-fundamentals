@@ -17,7 +17,7 @@
         <li>Ананас</li>
         <li>Слива</li>
     </ul>
-
+    <button id="sort">Sort</button>
     <script>
         /*
         Задание:
@@ -25,9 +25,12 @@
         на кнопку (кнопку нужно добавить), а не при загрузке страницы
         */
         let list = document.querySelector("#list");
+        let btn = document.querySelector("#sort");
 
         let items = document.querySelectorAll("li"); // получаем объект NodeList (это не массив)
-        let itemsArray = Array.from(items); // на основе NodeList создаем массив
+
+        btn.addEventListener("click", ()=> {
+            let itemsArray = Array.from(items); // на основе NodeList создаем массив
         
         // выполняем сортировку с помощью стандартного метода массива
         // так как сортируются узлы DOM нужно определить критерии, по которым узлы будут сравниваться
@@ -46,10 +49,10 @@
 
         // добавление элементов в алфавитном порядке
         // так как элементы уже есть в DOM дереве, то при добавлении элемент удаляется со своей предыдущей позиции
-        itemsArray.forEach(item => {
-            list.append(item);
+        itemsArray.forEach(items => {
+            list.append(items);
         });
-
+        });
 
     </script>
 </body>
