@@ -98,8 +98,15 @@
             let p = document.createElement("p");
             p.innerText = text;
 
+            let btn = document.createElement("button");
+            btn.innerText = "Delete";
+            btn.addEventListener("click", ()=> {
+                btn.parentElement.remove();
+            });
+
             div.append(input);
             div.append(p);
+            div.append(btn);
 
             return div;
         }
